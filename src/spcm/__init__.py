@@ -14,7 +14,7 @@ try:
     mpl = True
 except ImportError:
     mpl = False
-units = UnitRegistry(autoconvert_offset_to_baseunit=True)
+units = UnitRegistry(autoconvert_offset_to_baseunit=True, on_redefinition="ignore")
 units.define("sample = 1 = Sa = Sample = Samples = S")
 units.define("promille = 0.001 = ‰ = permille = perthousand = perthousands = ppt")
 units.define("fraction = 1 = frac = Frac = Fracs = Fraction = Fractions = Frac = Fracs")
